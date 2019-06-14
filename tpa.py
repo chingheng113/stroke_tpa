@@ -7,7 +7,7 @@ current_path = os.path.dirname(__file__)
 
 
 def is_tpa():
-    df_case = pd.read_csv(os.path.join(current_path, 'data', 'raw', 'CASEDCASE-2016-05-2.csv'))
+    df_case = pd.read_csv(os.path.join(current_path, 'data', 'raw', 'CASEDCASE.csv'))
     df_tpa = df_case[['ICD_ID', 'IVTPATH_ID', 'IVTPA_DT', 'IVTPAH_NM', 'IVTPAM_NM', 'IVTPAMG_NM', 'NIVTPA_ID']]
     # ICD_ID = 1 (Infract)
     df_tpa = df_tpa[df_tpa.ICD_ID == 1]
